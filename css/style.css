@@ -1,0 +1,380 @@
+@font-face {
+    font-family: "Wadik";
+    src: url('../font/Wadik.otf');
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Wadik", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header styles */
+header {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-header{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-info {
+    font-size: 10px;
+}
+
+.order-button .button {
+    background-color: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 300px 0 20px 0;
+    position: relative;
+    height: 600px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 0 0 50px;
+    padding: 0 15px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ff4d4d;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.details-btn {
+    background-color: transparent;
+    /* border: 2px solid white; */
+}
+
+/* Services section */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.service-card {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.service-card img {
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.service-content {
+    padding: 20px;
+    margin: auto 0;
+    text-align: left;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.service-content h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.service-content .button {
+    font-size: 12px;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+/* Why us section */
+.why-us {
+    padding: 60px 0;
+    text-align: center;
+    height: 800px;
+}
+
+.why-us h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.benefit {
+    flex: 1;
+    max-width: 400px;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.star {
+    color: #93d3ff; 
+    font-size: 48px;
+    margin: 0 2px;
+    text-shadow: 10px 5px 5px gray;
+}
+
+.benefit-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.benefit h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.benefit p {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Map section */
+.map {
+    height: 400px;
+    background-color: #eee;
+    position: relative;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact section */
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.96);
+    width: 260px;
+    height: auto;
+    min-height: 186px;
+    position: absolute;
+    top: 22%;
+    right: 15%;
+    padding: 20px 20px 20px 20px;
+    color: #ababab;
+    font-size: 8px;
+    text-align: left;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 35px;
+}
+
+.contact-info b{
+    font-weight: normal;
+}
+
+.phone-map{
+    color: #ff4d4d;
+    font-size: 15px;
+}
+
+.mail{
+    color: #ababab;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to bottom, #ffffff 0%, #ff0000ef 40%, #ff0000 100%);      
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 70px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .services-container,
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card,
+    .benefit {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
