@@ -53,6 +53,7 @@ header {
 }
 
 .main-nav li {
+    font-size: 18px;
     margin: 0 15px;
 }
 
@@ -191,17 +192,17 @@ header {
 }
 
 .service-content h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
 .service-content p {
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .service-content .button {
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px 15px;
     border-radius: 30px;
 }
@@ -377,4 +378,65 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+
+
+/* Update the navigation menu styles with animation */
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+}
+
+/* Top line */
+.main-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Bottom line */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover animation - lines expand from center */
+.main-nav a:hover::before,
+.main-nav a:hover::after,
+.main-nav a.active::before,
+.main-nav a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active state - lines remain visible */
+.main-nav a.active::before,
+.main-nav a.active::after {
+    width: 100%;
+    left: 0;
 }
